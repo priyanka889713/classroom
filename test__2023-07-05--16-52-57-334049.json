@@ -1,0 +1,131 @@
+{
+	"name":	"test__2023-07-05--16-52-57-334049",
+	"cmd.replication_definition":	{
+		"tasks":	[{
+				"task":	{
+					"name":	"test",
+					"source_name":	"SQL",
+					"target_names":	["file"]
+				},
+				"source":	{
+					"rep_source":	{
+						"source_name":	"SQL",
+						"database_name":	"SQL"
+					},
+					"source_tables":	{
+						"name":	"SQL",
+						"explicit_included_tables":	[{
+								"owner":	"dbo",
+								"name":	"Cars1",
+								"estimated_size":	101,
+								"orig_db_id":	1015674666,
+								"validation_sampling_percentage":	0
+							}]
+					}
+				},
+				"targets":	[{
+						"rep_target":	{
+							"target_name":	"file",
+							"target_state":	"DISABLED",
+							"database_name":	"file"
+						}
+					}],
+				"task_settings":	{
+					"source_settings":	{
+					},
+					"target_settings":	{
+						"queue_settings":	{
+							"message_shape":	{
+							},
+							"key_shape":	{
+							}
+						},
+						"ftm_settings":	{
+						}
+					},
+					"sorter_settings":	{
+						"local_transactions_storage":	{
+						}
+					},
+					"common_settings":	{
+						"change_table_settings":	{
+							"handle_ddl":	false,
+							"header_columns_settings":	{
+							}
+						},
+						"audit_table_settings":	{
+						},
+						"dr_settings":	{
+						},
+						"statistics_table_settings":	{
+						},
+						"bidi_table_settings":	{
+						},
+						"task_uuid":	"ffbd0583-72b7-db4e-a8e1-b01d30eed847",
+						"status_table_settings":	{
+						},
+						"suspended_tables_table_settings":	{
+						},
+						"history_table_settings":	{
+						},
+						"exception_table_settings":	{
+						},
+						"recovery_table_settings":	{
+						},
+						"data_batching_settings":	{
+						},
+						"data_batching_table_settings":	{
+						},
+						"log_stream_settings_depricated":	{
+						},
+						"ddl_history_table_settings":	{
+						},
+						"customized_charset_settings":	{
+							"validation":	{
+								"sub_char":	0
+							}
+						}
+					}
+				}
+			}],
+		"databases":	[{
+				"name":	"SQL",
+				"role":	"SOURCE",
+				"is_licensed":	true,
+				"type_id":	"SQL_SERVER_COMPONENT_TYPE",
+				"db_settings":	{
+					"$type":	"SqlserverSettings",
+					"username":	"sa",
+					"password":	"{ZAD503B2B7044EB35730872F7164081460045963315F8762F6}",
+					"server":	"SSLTP11246\\MSSQL",
+					"database":	"details",
+					"useWindowsAuthentication":	false,
+					"safeguardPolicyDesignator":	"None",
+					"safeguardPolicy":	"EXCLUSIVE_AUTOMATIC_TRUNCATION",
+					"suspendTableWithComputedColumn":	true
+				},
+				"override_properties":	{
+				}
+			}, {
+				"name":	"file",
+				"role":	"TARGET",
+				"is_licensed":	true,
+				"type_id":	"FILE_COMPONENT_TYPE",
+				"db_settings":	{
+					"$type":	"FileSettings",
+					"csvRowDelimiter":	"\\r\\n",
+					"dataPath":	"C:\\csv",
+					"addColumnName":	true
+				},
+				"override_properties":	{
+				}
+			}]
+	},
+	"_version":	{
+		"version":	"2022.5.0.291",
+		"version_major":	2022,
+		"version_minor":	5,
+		"version_revision":	291
+	},
+	"description":	"Host name: SSLTP11246, Time: 2023-07-05 16:52:57.334049"
+}
